@@ -57,7 +57,7 @@ Your app should now be running at http://localhost:3000.
 
 🌐 Demo
 
-Check out the live demo: https://url.salimi.my
+Check out the live demo: https:
 
 🖌️ UI / Design
 
