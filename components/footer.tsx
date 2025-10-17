@@ -6,12 +6,12 @@ const Footer = () => {
           Created by{' '}
           <a
             className='hover:underline'
-            href='https://www.salimi.my/'
-            aria-label='Salimi'
+            href='https://www.rajesharma.up.railway.app/'
+            aria-label='Rajesh Portfolio'
             target='_blank'
             rel='noreferrer'
           >
-            Salimi
+            Rajesh
           </a>{' '}
           &copy; {new Date().getFullYear()}. All right reserved.
         </small>
