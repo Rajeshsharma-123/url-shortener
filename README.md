@@ -1,72 +1,79 @@
-🚀 URL Shortener
+# 🔗 URL Shortener
 
-URL Shortener is a modern app built with Next.js that allows you to shorten URLs, create custom short links, and view analytics. It’s fast, simple, and comes with light/dark mode support.
+A modern, full-stack URL shortener built with Next.js 13 that provides fast link shortening, custom slugs, and comprehensive analytics with a beautiful, responsive interface.
 
-Live Demo
+## ✨ Features
 
-✨ Features
+- **🔗 URL Shortening** - Quickly shorten any URL with auto-generated or custom slugs
+- **📊 Analytics Dashboard** - Track click statistics, geographic data, and performance metrics
+- **🎨 Theme Support** - Light, dark, and system theme modes with seamless transitions
+- **🔐 Authentication** - Secure user authentication powered by Clerk
+- **⚡ Custom Short URLs** - Create personalized, memorable short links
+- **📱 Responsive Design** - Optimized for desktop, tablet, and mobile devices
+- **🚀 High Performance** - Built with Next.js 13 for optimal speed and SEO
 
-Simple URL shortening – Quickly shorten any URL.
+## 🛠️ Tech Stack
 
-Custom short URLs – Create personalized slugs for easy sharing.
+| Category       | Technologies                          |
+|----------------|---------------------------------------|
+| **Frontend**   | Next.js 13, TypeScript, Tailwind CSS |
+| **UI Library** | Shadcn/ui                             |
+| **Backend**    | Clerk Authentication                  |
+| **Database**   | PostgreSQL with Prisma ORM            |
+| **State**      | Zustand                               |
+| **Hosting**    | Vercel (Frontend) + Neon (Database)   |
 
-Analytics & statistics – Track link clicks and performance.
+## 🚀 Quick Start
 
-Light / Dark / System mode – Seamless UI themes.
+### Prerequisites
 
-Authentication – Secure login with Clerk.
+- Node.js 18+ installed
+- PostgreSQL database (Neon recommended)
+- Clerk account for authentication
 
-Database – Powered by PostgreSQL with Neon and Prisma.
+### Installation
 
-State management – Using Zustand.
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd url-shortener
+2. Install dependencies
 
-Hosting – Deployed on Vercel.
+bash
+pnpm install
+Environment Configuration
 
-🛠️ Tech Stack
-Frontend	Backend	Database	State	Styling	Hosting
-Next.js 13	Clerk	PostgreSQL	Zustand	Tailwind CSS	Vercel
-Shadcn/ui	Prisma	Neon	-	TypeScript	-
-⚡ Getting Started
+Copy .env.example to .env
 
-Clone the repo
+Configure the following variables:
 
-git clone <repo-url>
-cd url-shortener
+env
+DATABASE_URL="your-postgresql-connection-string"
+CLERK_SECRET_KEY="your-clerk-secret-key"
+CLERK_PUBLISHABLE_KEY="your-clerk-publishable-key"
+NEXT_PUBLIC_CLERK_SIGN_IN_URL="/sign-in"
+NEXT_PUBLIC_CLERK_SIGN_UP_URL="/sign-up"
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL="/dashboard"
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL="/dashboard"
+Database Setup
 
-
-Setup environment variables
-Copy .env.example to .env and fill in your Database URL & Clerk Auth configurations.
-
-Install dependencies
-
-npm install
-
-
-Setup database
-
+bash
 npx prisma db push
 npx prisma generate
+Start Development Server
 
+bash
+pnpm dev
+The application will be available at http://localhost:3000.
 
-Run the development server
-
-npm run dev
-
-
-Your app should now be running at http://localhost:3000.
-
-🌐 Demo
-
-Check out the live demo: https:
-
-🖌️ UI / Design
-
-Fully responsive, works on mobile and desktop
-
-Light / Dark / System theme toggle
-
-Simple and clean design using Shadcn/ui
-
-📦 Deployment
-
-The app is hosted on Vercel, making it easy to deploy updates instantly.
+📁 Project Structure
+text
+url-shortener/
+├── app/                 # Next.js 13 app directory
+├── components/          # Reusable UI components
+├── lib/                # Utility functions and configurations
+├── prisma/             # Database schema and migrations
+├── store/              # Zustand state management
+└── public/             # Static assets
+🌐 Live Demo
+Experience the application live: https://urlii.vercel.app
