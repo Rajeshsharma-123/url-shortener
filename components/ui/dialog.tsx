@@ -10,11 +10,9 @@ const Dialog = DialogPrimitive.Root;
 
 const DialogTrigger = DialogPrimitive.Trigger;
 
-const DialogPortal = ({
-  className,
-  ...props
-}: DialogPrimitive.DialogPortalProps) => (
-  <DialogPrimitive.Portal className={cn(className)} {...props} />
+// FIX: Removed the 'className' prop as DialogPrimitive.DialogPortalProps does not support it.
+const DialogPortal = (props: DialogPrimitive.DialogPortalProps) => (
+  <DialogPrimitive.Portal {...props} />
 );
 DialogPortal.displayName = DialogPrimitive.Portal.displayName;
 
@@ -119,5 +117,5 @@ export {
   DialogHeader,
   DialogFooter,
   DialogTitle,
-  DialogDescription
+  DialogDescription,
 };
